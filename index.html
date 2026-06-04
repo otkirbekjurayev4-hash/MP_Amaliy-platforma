@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhandislik amaliy mashg‘ulotlar platformasi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="toast"></div>
+
+  <section id="loginPage" class="login-page">
+    <div class="login-card">
+      <div class="brand">
+        <div class="brand-icon">MP</div>
+        <div>
+          <h1>Muhandislik fanlari amaliy platformasi</h1>
+          <p>Fanlar, topshiriqlar, laboratoriyalar, testlar, hisobotlar va monitoring</p>
+        </div>
+      </div>
+      <form id="loginForm" class="login-form">
+        <label>Login</label>
+        <input id="loginUsername" required placeholder="admin, teacher1 yoki student1" />
+        <label>Parol</label>
+        <input id="loginPassword" type="password" required placeholder="Parolni kiriting" />
+        <button type="submit">Platformaga kirish</button>
+      </form>
+      <div class="demo-box">
+        <b>Demo foydalanuvchilar:</b><br>
+        Admin: <code>admin</code> / <code>admin123</code><br>
+        O‘qituvchi: <code>teacher1</code> / <code>teacher123</code><br>
+        Talaba: <code>student1</code> / <code>student123</code>
+      </div>
+    </div>
+  </section>
+
+  <section id="appPage" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-head">
+        <div class="side-logo">MP</div>
+        <div>
+          <h2>Amaliy platforma</h2>
+          <p>Muhandislik fanlari</p>
+        </div>
+      </div>
+      <nav id="navMenu"></nav>
+      <button id="logoutBtn" class="logout-btn">↪ Chiqish</button>
+      <div class="side-footer">© 2026 Amaliy platforma</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">Platforma boshqaruv paneli</p>
+        </div>
+        <div class="top-actions">
+          <input id="globalSearch" placeholder="Qidirish..." oninput="searchPage(this.value)" />
+          <div class="user-pill" id="userPill"></div>
+        </div>
+      </header>
+      <div id="content"></div>
+    </main>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
